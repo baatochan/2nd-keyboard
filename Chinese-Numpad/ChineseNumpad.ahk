@@ -1,15 +1,8 @@
-~NumLock::
-    Check := true
-    SetTimer, CheckOff, 1000 ; 1 second to type in 001
-return
-
-Numpad1::
-  If Check
-      Send {Home}
+$NumLock::
+  KeyWait, NumLock
+  KeyWait, NumPad4, D T1
+  If Errorlevel ;not double pressed
+   Send {Numlock}
   Else
-      Send 2
-return
-
-CheckOff:
-    Check := false
-return
+   MsgBox You pressed the left key
+Return
