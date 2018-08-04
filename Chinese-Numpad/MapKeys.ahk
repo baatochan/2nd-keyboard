@@ -1,8 +1,8 @@
 ;/**
 ; * As I'm using special way to distinguish my main numpad from the one I change to 'F13' - 'F23' keys I need
-; * this script whne mapping those keys in the game.
+; * this script while mapping those keys in the game.
 ; *
-; * It temporally changes the cahaviour of 'q' - 'a' keys to 'F13' - 'F23'.
+; * It temporally changes the behavior of 'q' - 'a' keys to 'F13' - 'F23'.
 ; */
 
 q::F13

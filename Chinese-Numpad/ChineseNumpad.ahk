@@ -1,21 +1,21 @@
 ;/**
-; * Script changes bahaviour of numpad keys that are available when 'NumLock' is off. It changes them to 'F13' - 'F23' keys.
+; * Script changes behavior of numpad keys that are available when 'NumLock' is off. It changes them to 'F13' - 'F23' keys.
 ; * Useful in games that can't distinguish them from 'Numpad0' - 'Numpad9' keys.
 ; */
 
-~Numlock::return ;// Needed to be set as hotkey for recognizing as 'A_PriorHotkey'; '~' means that behaviour is not changed.
+~Numlock::return ;// Needed to be set as hotkey for recognizing as 'A_PriorHotkey'; '~' means that behavior is not changed.
 
 ;/**
-; * `NumpadIns::F13` would be enoguh if you want to change bahaviour for every numpad connected to PC.
-; * I have special numpad that because of some weird behaviuor can be distinguished from the main one on keyboard
-; * and I want to change only its behaviour leaving the one on keyboard to work as it should.
+; * `NumpadIns::F13` would be enough if you want to change behavior for every numpad connected to PC.
+; * I have special numpad that because of some weird behavior can be distinguished from the main one on keyboard
+; * and I want to change only its behavior leaving the one on keyboard to work as it should.
 ; */
 
 $NumpadIns:: ;// '$' means that it's only run when physical key is pressed; prevents infinite loops
 If (A_TimeSincePriorHotkey < 150 and A_PriorHotkey = "~Numlock") { ;// Checks if recently 'NumLock' key was pressed
-		Send {F13} ;// If so then change behaviour
+		Send {F13} ;// If so then change behavior
 	} Else {
-		Send {NumpadIns} ;// If not then run normal behaviuor
+		Send {NumpadIns} ;// If not then run normal behavior
 	}
 Return
 
