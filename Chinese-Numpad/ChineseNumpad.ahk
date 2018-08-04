@@ -1,8 +1,9 @@
-$NumLock::
-  KeyWait, NumLock
-  KeyWait, NumPad4, D T1
-  If Errorlevel ;not double pressed
-   Send {Numlock}
-  Else
-   MsgBox You pressed the left key
+$Numpad1::
+  Tooltip {A_TimeSincePriorHotkey}
+  If (A_TimeSincePriorHotkey < 75 && A_PriorHotkey <> Numlock) {
+    Tooltip yyy
+    Send o
+  } Else {
+    Send {Numpad1}
+  }
 Return
